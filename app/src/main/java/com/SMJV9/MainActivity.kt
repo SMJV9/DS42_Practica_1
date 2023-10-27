@@ -83,16 +83,27 @@ class MainActivity : AppCompatActivity() {
             }
             2->{
                 //C = (F - 32) * 5/9
+                result = (value.toDouble() - 32) * 5/9
+
+                total.text = result.toString()
             }
             3->{
-                //K = F + 459.67 / 1.8
                 // (F - 32) * 5/9 + 273.15
+                result = (value.toDouble() - 32) * 5/9 + 273.15
+
+                total.text = result.toString()
             }
             4->{
-                //c + K - 273.15
+                //c = K - 273.15
+                result = value.toDouble() - 273.15
+
+                total.text = result.toString()
             }
             5->{
                 //F = (K - 273.15) * 1.8 + 32
+                result = (value.toDouble() - 273.15) * 1.8 + 32
+
+                total.text = result.toString()
             }
         }
     }
